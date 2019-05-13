@@ -4,6 +4,15 @@ function takeANumber(current_line, new_person) {
   return `Welcome, ${new_person}. You are number ${line_number} in line.`;
 }
 
+var ticket_number = 0;
+
+function takeANumber(current_line) {
+  ticket_number++;
+  current_line.push(ticket_number);
+  return `Welcome, you are number ${ticket_number} in line.`;
+}
+
+
 function nowServing(katzDeliLine) {
   let first_person = katzDeliLine[0];
   katzDeliLine.shift(first_person);
